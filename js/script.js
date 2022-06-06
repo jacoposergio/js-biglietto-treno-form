@@ -21,18 +21,23 @@ generateButton.addEventListener('click',
         console.log(finalPrice);
 
         document.getElementById('ticket_name').innerHTML = userName;
+        document.getElementById('ticket_price').innerHTML = finalPrice;
+        document.getElementById('ticket_age').innerHTML = userAge;
         document.getElementById('ticket').classList.add('active');
     }
 );
 
 const cancelButton = document.getElementById('cancel_ticket');
-generateButton.addEventListener('click',
+cancelButton.addEventListener('click',
         function() {
             document.getElementById('user_name').value ='';
             document.getElementById('user_km').value ='';
             document.getElementById('user_age').value ='maggiorenne';
-        }
+        
 
         document.getElementById('ticket_name').innerHTML = '';
-        // document.getElementById('ticket').classList.add('active');
+        document.getElementById('ticket_age').innerHTML = '';
+        document.getElementById('ticket_price').innerHTML = '';
+        document.getElementById('ticket').classList.toggle('active');
+    }
 );
