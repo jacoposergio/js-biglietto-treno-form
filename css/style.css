@@ -9,3 +9,11 @@
 .form_item{
     padding: 20px 20px;
 }
+
+#ticket{
+    display: none;
+}
+
+#ticket.active{
+    display: block;
+}
